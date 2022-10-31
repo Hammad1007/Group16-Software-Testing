@@ -1,0 +1,4 @@
+1 - Install softwares i.e., Cypress, Nightwatch, Cucumber
+2 - identifying test cases  
+    Hammad = 
+    Zarin = 
