@@ -1,8 +1,8 @@
 1 - Install softwares i.e., Cypress, Nightwatch, Cucumber
 2 - identifying test cases
 3- Scenario Outlines:
-    Hammad = Task, Exam, search
-    Zarin = Schedule, Class, subject
+    Hammad = Task, Exam, Search
+    Zarin = Schedule, Class, Subject
 
 Task outline : Given that I'm a signed in user and I want to create a general task, when I enter my <subject>, <type>, <due date>, <title>, and <details>, then I should <be allowed> to create a new task
 
