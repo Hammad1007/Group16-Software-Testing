@@ -1,6 +1,8 @@
 # Group16-Software-Testing
 Semester Project for software testing
 
+Submitted to: Mr. Jawad Cheema
+
 **Team Members:**
 
 | Sr.no | Name   | Roll number | Section | 
