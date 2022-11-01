@@ -1,5 +1,17 @@
 1 - Install softwares i.e., Cypress, Nightwatch, Cucumber
 2 - identifying test cases
 3- Scenario Outlines:
-    Hammad = Task, Exam
-    Zarin = Schedule, Class
+    Hammad = Task, Exam, search
+    Zarin = Schedule, Class, subject
+
+Task outline : Given that I'm a signed in user and I want to create a general task, when I enter my <subject>, <type>, <due date>, <title>, and <details>, then I should <be allowed> to create a new task
+
+Exam outline : Given that I'm a signed in user and I want to create an exam task, when I enter my <subject>, <module>, <date>, <start time>, <duration>, <seat>, and <room>, then I should <be allowed> to create an exam task
+
+Schedule outline: Given that I'm a signed in user and I want to create a schedule, when I enter my <start date>, <end date>, and <classes schedule>, then I should <be allowed> to create a new schedule
+
+Class outline: Given that I'm a signed in user and I want to create a class in a schedule, when I enter my <subject>, <module>, <room>, <building>, and <teacher>, then I should <be allowed> to create a new class
+
+Subject: Given that I'm a signed in user and I want to create a new subject, when I enter my <name>,and <select color>, then I should <be allowed> to create a new subject
+
+Search: Given that I'm a signed in user and I want to search something, when I enter my <query> and/or <apply filter>, then I should <be allowed> to get results
