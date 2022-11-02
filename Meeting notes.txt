@@ -1,5 +1,6 @@
 1 - Install softwares i.e., Cypress, Nightwatch, Cucumber
 2 - identifying test cases
+
 3- Scenario Outlines:
     Hammad = Task, Exam, Search
     Zarin = Schedule, Class, Subject
