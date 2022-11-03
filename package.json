@@ -23,5 +23,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Hammad1007/Group16-Software-Testing"
-  }
+  },
+  "cypress-cucumber-preprocessor": {
+
+    "nonGlobalStepDefinitions": true
+    
+    }
 }
