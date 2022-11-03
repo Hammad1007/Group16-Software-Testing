@@ -11,7 +11,7 @@ cy.visit("http://automationpractice.com/");
 When("I entered valid crediential", (datatable) => {
 
 datatable.hashes().forEach((element) => {
-
+n
 login.enterUserNamePassword(element.email, element.validpassword);
 
 });
