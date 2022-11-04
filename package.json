@@ -4,7 +4,8 @@
   "description": "begin",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open",
+    "cypress:runner" :"cypress run"
   },
   "keywords": [
     "cypress",
