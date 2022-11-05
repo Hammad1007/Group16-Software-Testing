@@ -28,4 +28,4 @@ class AddSubject {
     };
 
   };
-  module.exports = new AddSubject();
+  export default new AddSubject();

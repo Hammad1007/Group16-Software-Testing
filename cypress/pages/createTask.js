@@ -26,5 +26,5 @@ class CreateTask {
 
   }
   
-  module.exports = new CreateTask();
+  export default new CreateTask();
   
