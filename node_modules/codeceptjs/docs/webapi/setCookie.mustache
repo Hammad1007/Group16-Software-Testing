@@ -1,0 +1,16 @@
+Sets cookie(s).
+
+Can be a single cookie object or an array of cookies:
+
+```js
+I.setCookie({name: 'auth', value: true});
+
+// as array
+I.setCookie([
+  {name: 'auth', value: true},
+  {name: 'agree', value: true}
+]);
+```
+
+@param {Cookie|Array<Cookie>} cookie a cookie object or array of cookie objects.
+⚠️ returns a _promise_ which is synchronized internally by recorder

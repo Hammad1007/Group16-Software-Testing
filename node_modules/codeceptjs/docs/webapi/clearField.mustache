@@ -1,0 +1,9 @@
+Clears a `<textarea>` or text `<input>` element's value.
+
+```js
+I.clearField('Email');
+I.clearField('user[email]');
+I.clearField('#email');
+```
+@param {LocatorOrString} editable field located by label|name|CSS|XPath|strict locator.
+⚠️ returns a _promise_ which is synchronized internally by recorder.
