@@ -14,15 +14,15 @@ class MystudyPage {
     typeduedate(duedate) {
       this.elements.duedateField().clear();
       this.elements.duedateCleared().type(duedate);
-    }
+    };
   
     typeTitle(title) {
       this.elements.TitleField().type(title);
-    }
+    };
   
     clickSave() {
       this.elements.SaveButton().click();
-    }
+    };
 
   }
   
