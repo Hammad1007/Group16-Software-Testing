@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress open",
-    "cypress:runner" :"cypress run"
+    "cypress:runner": "cypress run"
   },
   "keywords": [
     "cypress",
@@ -18,7 +18,10 @@
     "cypress-cucumber-preprocessor": "^4.3.1"
   },
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^13.0.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
     "cucumber": "^6.0.7",
+    "esbuild": "^0.15.13",
     "typescript": "^4.7.4"
   },
   "repository": {
@@ -26,8 +29,6 @@
     "url": "https://github.com/Hammad1007/Group16-Software-Testing"
   },
   "cypress-cucumber-preprocessor": {
-
     "nonGlobalStepDefinitions": true
-    
-    }
+  }
 }
