@@ -1,10 +1,13 @@
+1st meeting:
+
 1 - Install softwares i.e., Cypress, Nightwatch, Cucumber
 2 - identifying test cases
 
 3- Scenario Outlines:
     Hammad = Task, Exam, Search
     Zarin = Schedule, Class, Subject
-    
+
+2nd meeting:
 Task outline : Given that I'm a signed in user and I want to create a general task, when I enter my <subject>, <type>, <due date>, <title>, and <details>, then I should <be allowed> to create a new task
 
 Exam outline : Given that I'm a signed in user and I want to create an exam task, when I enter my <subject>, <module>, <date>, <start time>, <duration>, <seat>, and <room>, then I should <be allowed> to create an exam task
@@ -16,3 +19,8 @@ Class outline: Given that I'm a signed in user and I want to create a class in a
 Subject: Given that I'm a signed in user and I want to create a new subject, when I enter my <name>,and <select color>, then I should <be allowed> to create a new subject
 
 Search: Given that I'm a signed in user and I want to search something, when I enter my <query> and/or <apply filter>, then I should <be allowed> to get results
+
+3rd meeting:
+
+make features and step definitions folders seperately. Make pages folder. Write the path of step definitions in cypres-cucumber-processorrc.json file.
+Write the specs format i.e., feature file, in the package.json file. Start writing automation tests
