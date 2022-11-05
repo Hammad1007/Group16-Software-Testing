@@ -24,3 +24,5 @@ Search: Given that I'm a signed in user and I want to search something, when I e
 
 make features and step definitions folders seperately. Make pages folder. Write the path of step definitions in cypres-cucumber-processorrc.json file.
 Write the specs format i.e., feature file, in the package.json file. Start writing automation tests
+
+Install CodeceptJS + RestAssured
