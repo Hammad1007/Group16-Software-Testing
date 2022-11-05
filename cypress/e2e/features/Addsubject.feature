@@ -24,7 +24,7 @@ Scenario: Incorrect more name
         Then The error message "Name must be 50 or less characters." is displayed
 
 Scenario: Missing name
-        When when I enter correct name
+        When when I enter missing name
             | name    |                                                   
             |  | 
         Then The error message "Name is required." is displayed

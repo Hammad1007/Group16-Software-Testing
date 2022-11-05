@@ -1,4 +1,4 @@
-class MystudyPage {
+class CreateTask {
     elements = {
       duedateField: () => cy.get(".pikaday > .ng-pristine"),
       duedateCleared: () =>  cy.get('.pikaday > .ng-valid-format'),
@@ -26,5 +26,5 @@ class MystudyPage {
 
   }
   
-  module.exports = new MystudyPage();
+  module.exports = new CreateTask();
   
