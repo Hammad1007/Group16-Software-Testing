@@ -12,7 +12,7 @@ module.exports = defineConfig({
         const bundler = createBundler({
             plugins: [createEsBuildPlugin(config)],
         });
-
+        baseUrl: 'https://app.mystudylife.com';
         on('file:preprocessor', bundler);
         await addCucumberPreprocessorPlugin(on, config);
         return config;
