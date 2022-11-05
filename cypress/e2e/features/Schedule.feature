@@ -24,13 +24,13 @@ Scenario: Incorrect end date
         Then The error message "Invalid date. Must be in format November 5 2022." is displayed
 
 Scenario: Missing start date
-        When when I enter incorrect start date
+        When when I enter missing start date
              | startdate      | enddate    |                                                  
              |                | May 3 2023 |
         Then The error message "Required." is displayed
 
 Scenario: Missing end date
-        When when I enter incorrect start date
+        When when I enter missing end date
              | startdate      | enddate    |                                                  
              | January 3 20   |            |
         Then The error message "Required." is displayed

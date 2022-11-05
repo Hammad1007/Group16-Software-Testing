@@ -38,6 +38,7 @@ class Schedule {
     };
   
     clickSave() {
+      cy.get('#scheduling-mode-fixed').click();
       this.elements.savebtn().click();
     };
 

@@ -13,7 +13,7 @@ import {
     cy.get('footer > .btn').click()
     cy.get('.icon-task').click()
     cy.get('.zero > .btn').click()
-    cy.get('.select-wrap > .add-on')
+    cy.get('.select-wrap > .add-on').click()
   });
   
   //when statements
