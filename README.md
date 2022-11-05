@@ -1,7 +1,7 @@
 # Group16-Software-Testing
 Semester Project for software testing
 
-Assignment 2
+**Assignment 2**
 
 Submitted to: Mr. Jawaad Cheema
 
