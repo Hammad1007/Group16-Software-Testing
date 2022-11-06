@@ -26,3 +26,10 @@ make features and step definitions folders seperately. Make pages folder. Write 
 Write the specs format i.e., feature file, in the package.json file. Start writing automation tests
 
 Install CodeceptJS + RestAssured
+
+4th meeting:
+
+Search for website done. Reqres is going to be used for web APIs.
+
+Zarin: Verfiy a found call, verify a successful call, verify not found call, verify getting a single user/ list of users
+Hammad: verify creating new user, verify uploading a file, deleting a user
