@@ -28,3 +28,12 @@ The code mentioned above was written by the coders and added in the pom.xml file
 In order to test the code with every possible data, the class randomizetest is used. It offers several methods. 
 
 In order to check for assertions, elasticsearchassertions and elasticsearchgeoassertions classes are used.  
+
+##### Elasticsearch testing framework
+End points can be accessed as follows:
+```
+Elasticsearch: https://localhost:9200
+Kibana: https://localhost:5601
+User: elastic
+Password: changeme
+```
