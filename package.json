@@ -4,7 +4,11 @@
   "description": "Semester Project for software testing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "def": "codeceptjs def",
+    "lint": "eslint . --fix",
+    "test": "codeceptjs run",
+    "api-load-test": "k6 run load-tests/scenario-1.js",
+    "generate-report": "allure generate output"
   },
   "repository": {
     "type": "git",
@@ -32,5 +36,8 @@
     "codeceptjs-expectwrapper": "^1.0.3",
     "expect": "^26.6.2",
     "form-data": "^3.0.0"
+  },
+  "directories": {
+    "test": "test"
   }
 }
