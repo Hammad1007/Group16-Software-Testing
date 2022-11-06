@@ -16,12 +16,13 @@ import {
   });
   
   //when statements
-  When("when I enter correct data", (table) => {
+  When("when I enter <module>, <duration>, <seat>, <room>", (table) => {
     table.hashes().forEach((row) => {
       cy.log(row.module);
       cy.log(row.duration);
       cy.log(row.seat);
       cy.log(row.room);
+      cy.log(row.error);
       
       CreateExam.elements.typeModule(row.module);
       CreateExam.elements.typeDuration(row.duration);
@@ -32,91 +33,18 @@ import {
     });
   });
 
-  //incorrect
-  When(" when I enter incorrect module", (table) => {
-    table.hashes().forEach((row) => {
-        cy.log(row.module);
-        cy.log(row.duration);
-        cy.log(row.seat);
-        cy.log(row.room);
-        
-        CreateExam.elements.typeModule(row.module);
-        CreateExam.elements.typeDuration(row.duration);
-        CreateExam.elements.typeSeat(row.seat);
-        CreateExam.elements.typeRoom(row.room);
-  
-        CreateExam.elements.clickSave();
-    });
-  });
 
-  Then("The error message {string} is displayed", (errorMessage) => {
-    CreateExam.elements.CheckErrorModule(errorMessage);
-  });
-
-  //
-
-  When("when I enter incorrect duration", (table) => {
+  Then("the <error> is displayed", (table) => {
     table.hashes().forEach((row) => {
       cy.log(row.module);
       cy.log(row.duration);
       cy.log(row.seat);
       cy.log(row.room);
+      cy.log(row.error);
       
-      CreateExam.elements.typeModule(row.module);
-      CreateExam.elements.typeDuration(row.duration);
-      CreateExam.elements.typeSeat(row.seat);
-      CreateExam.elements.typeRoom(row.room);
-
-      CreateExam.elements.clickSave();
+      CreateExam.elements.CheckErrorModule(row.error);
     });
+    
   });
 
-  Then("The error message {string} is displayed", (errorMessage) => {
-    CreateExam.elements.CheckErrorDuration(errorMessage);
-  });
-
-  //
-
-  When("when I enter incorrect seat", (table) => {
-    table.hashes().forEach((row) => {
-        cy.log(row.module);
-        cy.log(row.duration);
-        cy.log(row.seat);
-        cy.log(row.room);
-        
-        CreateExam.elements.typeModule(row.module);
-        CreateExam.elements.typeDuration(row.duration);
-        CreateExam.elements.typeSeat(row.seat);
-        CreateExam.elements.typeRoom(row.room);
-  
-        CreateExam.elements.clickSave();
-    });
-  });
-
-  Then("The error message {string} is displayed", (errorMessage) => {
-    CreateExam.elements.CheckErrorSeat(errorMessage);
-  });
-
-
-  When(" when I enter incorrect room", (table) => {
-    table.hashes().forEach((row) => {
-        cy.log(row.module);
-        cy.log(row.duration);
-        cy.log(row.seat);
-        cy.log(row.room);
-        
-        CreateExam.elements.typeModule(row.module);
-        CreateExam.elements.typeDuration(row.duration);
-        CreateExam.elements.typeSeat(row.seat);
-        CreateExam.elements.typeRoom(row.room);
-  
-        CreateExam.elements.clickSave();
-    });
-  });
-
-  Then("The error message {string} is displayed", (errorMessage) => {
-    CreateExam.elements.CheckErrorRoom(errorMessage);
-  });
-
-  
   

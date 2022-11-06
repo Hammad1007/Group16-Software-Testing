@@ -18,78 +18,24 @@ Given("I'm a signed in user and I click on create new task", () => {
 });
 
 //when statements
-When("when I enter incorrect due date", (table) => {
+When("when I enter < duedate>, and <title>", (table) => {
   table.hashes().forEach((row) => {
     cy.log(row.duedate);
     cy.log(row.title);
+    cy.log(row.error);
+
     CreateTask.typeduedate(row.duedate);
     CreateTask.typeTitle(row.title);
     CreateTask.clickSave();
   });
 });
 
-Then("The error message {string} is displayed", (errorMessage) => {
-  CreateTask.elements.errorMessage().should("have.text", errorMessage);
-});
-
-When("when I leave due date field empty", (table) => {
+Then("the <error> is displayed", (table) => {
   table.hashes().forEach((row) => {
     cy.log(row.duedate);
     cy.log(row.title);
-    CreateTask.typeduedate(row.duedate);
-    CreateTask.typeTitle(row.title);
-    CreateTask.clickSave();
+    cy.log(row.error);
 
+    CreateTask.elements.errorMessage().should("have.text", row.error);
   });
 });
-
-Then("The error message {string} is displayed", (errorMessage) => {
-  CreateTask.elements.errorMessage().should("have.text", errorMessage);
-});
-
-When("when I enter incorrect too short title", (table) => {
-  table.hashes().forEach((row) => {
-    cy.log(row.duedate);
-    cy.log(row.title);
-    CreateTask.typeduedate(row.duedate);
-    CreateTask.typeTitle(row.title);
-    CreateTask.clickSave();
-
-  });
-});
-
-Then("The error message {string} is displayed", (errorMessage) => {
-  CreateTask.elements.errorMessage().should("have.text", errorMessage);
-});
-
-When("when I enter incorrect too long title", (table) => {
-  table.hashes().forEach((row) => {
-    cy.log(row.duedate);
-    cy.log(row.title);
-    CreateTask.typeduedate(row.duedate);
-    CreateTask.typeTitle(row.title);
-    CreateTask.clickSave();
-
-  });
-});
-
-Then("The error message {string} is displayed", (errorMessage) => {
-  CreateTask.elements.errorMessage().should("have.text", errorMessage);
-});
-
-When("when I leave title field empty", (table) => {
-  table.hashes().forEach((row) => {
-    cy.log(row.duedate);
-    cy.log(row.title);
-    CreateTask.typeduedate(row.duedate);
-    CreateTask.typeTitle(row.title);
-    CreateTask.clickSave();
-
-  });
-});
-
-Then("The error message {string} is displayed", (errorMessage) => {
-  CreateTask.elements.errorMessage().should("have.text", errorMessage);
-});
-
-

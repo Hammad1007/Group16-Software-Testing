@@ -15,39 +15,25 @@ import {
   });
   
   //when statements
-  When("when I enter correct value", (table) => {
+
+
+  When("when I enter <search> value", (table) => {
+    table.hashes().forEach((row) => {
+        cy.log(row.search);
+        cy.log(row.error);
+        Search.elements.typeData(row.search);
+    });
+  });
+
+  Then("Error message <error> is displayed", (table) => {
     table.hashes().forEach((row) => {
       cy.log(row.search);
-      Search.elements.typeData(row.search);
-    });
+      cy.log(row.error);
+      AddSubject.elements.CheckError(row.error);
+  });
   });
 
-  //incorrect
-  When("when I enter incorrect less value", (table) => {
-    table.hashes().forEach((row) => {
-        cy.log(row.search);
-        Search.elements.typeData(row.search);
-    });
-  });
-
-  Then("The error message {string} is displayed", (errorMessage) => {
-    AddSubject.elements.CheckError(errorMessage);
-  });
-
-  //
-
-  When(" when I enter incorrect more value", (table) => {
-    table.hashes().forEach((row) => {
-        cy.log(row.search);
-        Search.elements.typeData(row.search);
-    });
-  });
-
-  Then("The error message {string} is displayed", (errorMessage) => {
-    AddSubject.elements.CheckError(errorMessage);
-  });
-
-  //
+  
 
 
 

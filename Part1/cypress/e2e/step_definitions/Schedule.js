@@ -16,75 +16,29 @@ import {
     cy.get('.icon-schedule').click()
     cy.get('.app-bar > .btns > .btn').click()
   });
-  
-  When("when I enter correct data", (table) => {
-    table.hashes().forEach((row) => {
-      cy.log(row.startate);
-      cy.log(row.enddate);
-      Schedule.typeStartDate(row.startdate);
-      Schedule.typeEndDate(row.enddate);
-      Schedule.clickSave();
-    });
-  });
-
 
   //when statements
-  When("when I enter incorrect start date", (table) => {
+  When("when I enter <startdate>, and <enddate>", (table) => {
     table.hashes().forEach((row) => {
       cy.log(row.startate);
       cy.log(row.enddate);
+      cy.log(row.error);
+
       Schedule.typeStartDate(row.startdate);
       Schedule.typeEndDate(row.enddate);
       Schedule.clickSave();
     });
   });
   
-  Then("The error message {string} is displayed", (errorMessage) => {
-    Schedule.elements.CheckErrorIncorrectStartDate(errorMessage);
-  });
-  
-  When("when I enter incorrect end date", (table) => {
+  Then("the <error> is displayed", (table) => {
     table.hashes().forEach((row) => {
       cy.log(row.startate);
       cy.log(row.enddate);
-      Schedule.typeStartDate(row.startdate);
-      Schedule.typeEndDate(row.enddate);
-      Schedule.clickSave();
-  
+      cy.log(row.error);
+
+      Schedule.elements.CheckErrorIncorrectStartDate(row.error);
+      
     });
-  });
-  
-  Then("The error message {string} is displayed", (errorMessage) => {
-    Schedule.elements.CheckErrorIncorrectEndDate(errorMessage);
-  });
-  
-  When("when I enter missing start date", (table) => {
-    table.hashes().forEach((row) => {
-      cy.log(row.startate);
-      cy.log(row.enddate);
-      Schedule.typeStartDate(row.startdate);
-      Schedule.typeEndDate(row.enddate);
-      Schedule.clickSave();
-  
-    });
-  });
-  
-  Then("The error message {string} is displayed", (errorMessage) => {
-    Schedule.elements.CheckErrorMissingStartDate(errorMessage);
-  });
-  
-  When("when I enter missing end date", (table) => {
-    table.hashes().forEach((row) => {
-      cy.log(row.startate);
-      cy.log(row.enddate);
-      Schedule.typeStartDate(row.startdate);
-      Schedule.typeEndDate(row.enddate);
-      Schedule.clickSave();
-  
-    });
-  });
-  
-  Then("The error message {string} is displayed", (errorMessage) => {
-    Schedule.elements.CheckErrorMissingEndDate(errorMessage);
+    
   });
   

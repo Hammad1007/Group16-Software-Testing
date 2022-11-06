@@ -16,12 +16,13 @@ import {
   });
   
   //when statements
-  When("when I enter correct values", (table) => {
+  When("when I enter <module>, <room>, <building>, and <teacher>", (table) => {
     table.hashes().forEach((row) => {
       cy.log(row.module);
       cy.log(row.room);
       cy.log(row.building);
       cy.log(row.teacher);
+      cy.log(row.error);
       
       CreateClass.elements.typeModule(row.module);
       CreateClass.elements.typeRoom(row.room);
@@ -31,83 +32,13 @@ import {
     });
   });
 
-  //incorrect
-  When("when I enter incorrect module", (table) => {
+  Then("the <error> is displayed", (table) => {
     table.hashes().forEach((row) => {
-        cy.log(row.module);
-        cy.log(row.room);
-        cy.log(row.building);
-        cy.log(row.teacher);
-        CreateClass.elements.typeModule(row.module);
-        CreateClass.elements.typeRoom(row.room);
-        CreateClass.elements.typeBuilding(row.building);
-        CreateClass.elements.typeTeacher(row.teacher);
-        CreateClass.elements.clickSave();
+      cy.log(row.module);
+      cy.log(row.room);
+      cy.log(row.building);
+      cy.log(row.teacher);
+      cy.log(row.error);
+     CreateClass.elements.CheckErrorModule(row.error);
     });
   });
-
-  Then("The error message {string} is displayed", (errorMessage) => {
-    CreateClass.elements.CheckErrorModule(errorMessage);
-  });
-
-  //
-
-  When("when I enter incorrect room", (table) => {
-    table.hashes().forEach((row) => {
-        cy.log(row.module);
-        cy.log(row.room);
-        cy.log(row.building);
-        cy.log(row.teacher);
-        CreateClass.elements.typeModule(row.module);
-        CreateClass.elements.typeRoom(row.room);
-        CreateClass.elements.typeBuilding(row.building);
-        CreateClass.elements.typeTeacher(row.teacher);
-        CreateClass.elements.clickSave();
-    });
-  });
-
-  Then("The error message {string} is displayed", (errorMessage) => {
-    CreateClass.elements.CheckErrorRoom(errorMessage);
-  });
-
-  //
-
-  When("when I enter incorrect building", (table) => {
-    table.hashes().forEach((row) => {
-        cy.log(row.module);
-        cy.log(row.room);
-        cy.log(row.building);
-        cy.log(row.teacher);
-        CreateClass.elements.typeModule(row.module);
-        CreateClass.elements.typeRoom(row.room);
-        CreateClass.elements.typeBuilding(row.building);
-        CreateClass.elements.typeTeacher(row.teacher);
-        CreateClass.elements.clickSave();
-    });
-  });
-
-  Then("The error message {string} is displayed", (errorMessage) => {
-    CreateClass.elements.CheckErrorBuilding(errorMessage);
-  });
-
-
-  When(" when I enter incorrect teacher", (table) => {
-    table.hashes().forEach((row) => {
-        cy.log(row.module);
-        cy.log(row.room);
-        cy.log(row.building);
-        cy.log(row.teacher);
-        CreateClass.elements.typeModule(row.module);
-        CreateClass.elements.typeRoom(row.room);
-        CreateClass.elements.typeBuilding(row.building);
-        CreateClass.elements.typeTeacher(row.teacher);
-        CreateClass.elements.clickSave();
-    });
-  });
-
-  Then("The error message {string} is displayed", (errorMessage) => {
-    CreateClass.elements.CheckErrorTeacher(errorMessage);
-  });
-
-  
-  
