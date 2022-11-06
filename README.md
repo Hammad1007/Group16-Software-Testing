@@ -23,4 +23,8 @@ We selected the project elasticsearch and will be looking at its framework along
    <version>2.1.0</version>
 </dependency>
 ```
-The code mentioned above was written by the coders and added in the pom.xml file for testing purposes. API testing is done using JUnit and elasticsearch test framework. Node ann indices are made using elasticsearch classes. The main classes for testing are ESTestcase and ESTokenStrameTestcase. 
+The code mentioned above was written by the coders and added in the pom.xml file for testing purposes. API testing is done using JUnit and elasticsearch test framework. Node ann indices are made using elasticsearch classes. The main classes for testing are ESTestcase and ESTokenStrameTestcase. ESIntechTestcase is used for integration testing. ESIntechTestcase.client() is used for getting a random a client. Some other methods to access the client can be accessed by ESIntechTestcase.internalcluster() method. For example masterclient(), nonmasterclient(), and clientnodeClient(). 
+
+In order to test the code with every possible data, the class randomizetest is used. It offers several methods. 
+
+In order to check for assertions, elasticsearchassertions and elasticsearchgeoassertions classes are used.  
