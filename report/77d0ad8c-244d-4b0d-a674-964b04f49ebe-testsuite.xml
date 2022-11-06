@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1667719145991' stop='1667719147536'>
+    <name>PUT tests:</name>
+    <title>PUT tests:</title>
+    <test-cases>
+        <test-case start='1667719145992' status='passed' stop='1667719147534'>
+            <name>Verify creating new user</name>
+            <title>Verify creating new user</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1667719145999' status='passed' stop='1667719146754'>
+                    <name>I: createNewUser {"name":"Desiree","job":"leader"}</name>
+                    <title>I: createNewUser {"name":"Desiree","job":"leader"}</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1667719145999' status='passed' stop='1667719146749'>
+                            <name>I send post request "/api/users", {"name":"Desiree","job":"leader"}</name>
+                            <title>I send post request "/api/users", {"name":"Desiree","job":"leader"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1667719146754' status='passed' stop='1667719147533'>
+                    <name>I send put request "/api/users/950", {"name":"Kraig","job":"leader"}</name>
+                    <title>I send put request "/api/users/950", {"name":"Kraig","job":"leader"}</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
