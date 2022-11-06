@@ -4,33 +4,13 @@ Feature: Create Class
 
 Background:
         Given I'm a signed in user and I click on schedule option and add class button.
-
-Scenario: correct values
-        When when I enter correct values
-            | module    | room | building | teacher |                                                  
-            | science   | 4    | 67       | lana    |
-        Then no error message is displayed.
-
-Scenario: Incorrect module
-        When when I enter incorrect module
-             | module                                                                   | room | building | teacher |                                                  
-             | sciencesciencesciencesciencesciencesciencesciencesciencesciencescience   | 4    | 67       | lana    |
-        Then The error message "Must be 40 characters or less." is displayed
-
-Scenario: Incorrect room
-        When when I enter incorrect room
-             | module    |  room                                                   | building | teacher |                                                  
-             | science   | jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj    | 67       | lana    |
-        Then The error message "Room must be 40 characters or less." is displayed
-
-Scenario: Incorrect building
-        When when I enter incorrect building
-             | module    | room | building                                                | teacher |                                                  
-             | science   | 4    | hvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv     | lana    |
-        Then The error message "Building must be 40 characters or less." is displayed
-
-Scenario: Incorrect teacher
-        When when I enter incorrect teacher
-                | module    | room | building | teacher |                                                  
-                | science   | 4    | 67       | hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh    |
-        Then The error message "Teacher must be 40 characters or less." is displayed
+Scenario Outline: Create new class
+        When when I enter <module>, <room>, <building>, and <teacher>
+        Then the <error> is displayed
+        Examples:
+            | module                                                               | room                                               | building |teacher|error|
+            | science                                                              | 4                                                  | 67  | lana    ||
+            |sciencesciencesciencesciencesciencesciencesciencesciencesciencescience|4                                                   |67|lana|Must be 40 characters or less.|
+            |science                                                               |jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj|67|lana|Room must be 40 characters or less.|
+            |science                                                               |4                                                   |hvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv|lana|Building must be 40 characters or less.|
+            |science                                                               |4                                                   |67|hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh|Teacher must be 40 characters or less.|

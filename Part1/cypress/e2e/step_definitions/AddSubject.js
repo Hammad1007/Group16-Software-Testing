@@ -17,9 +17,10 @@ import {
   });
   
   //when statements
-  When("when I enter correct name", (table) => {
+  When("when I enter <name>", (table) => {
     table.hashes().forEach((row) => {
       cy.log(row.name);
+      cy.log(row.error);
       AddSubject.elements.typename(row.name);
       AddSubject.elements.clickSave();
     });
@@ -34,36 +35,14 @@ import {
     });
   });
 
-  Then("The error message {string} is displayed", (errorMessage) => {
-    AddSubject.elements.CheckErrorless(errorMessage);
-  });
-
-  //
-
-  When("when I enter incorrect more name", (table) => {
+  Then("The <error> is displayed", (table) => {
     table.hashes().forEach((row) => {
       cy.log(row.name);
-      AddSubject.elements.typename(row.name);
-      AddSubject.elements.clickSave();
+      cy.log(row.error);
+      AddSubject.elements.CheckErrormore(row.error);
     });
   });
 
-  Then("The error message {string} is displayed", (errorMessage) => {
-    AddSubject.elements.CheckErrormore(errorMessage);
-  });
-
-  //
-
-  When("when I enter missing name", (table) => {
-    table.hashes().forEach((row) => {
-      cy.log(row.name);
-      AddSubject.elements.clickSave();
-    });
-  });
-
-  Then("The error message {string} is displayed", (errorMessage) => {
-    AddSubject.elements.CheckErrorMissing(errorMessage);
-  });
 
   
   
