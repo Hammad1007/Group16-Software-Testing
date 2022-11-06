@@ -30,6 +30,7 @@ In order to test the code with every possible data, the class randomizetest is u
 In order to check for assertions, elasticsearchassertions and elasticsearchgeoassertions classes are used.  
 
 **Elasticsearch testing framework**
+
 End points can be accessed as follows:
 ```
 Elasticsearch: https://localhost:9200
