@@ -1,0 +1,79 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1667719140963' stop='1667719142961'>
+    <name>GET tests:</name>
+    <title>GET tests:</title>
+    <test-cases>
+        <test-case start='1667719140964' status='passed' stop='1667719141416'>
+            <name>Verify a successful call</name>
+            <title>Verify a successful call</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1667719140967' status='passed' stop='1667719141415'>
+                    <name>I send get request "/api/users?page=2"</name>
+                    <title>I send get request "/api/users?page=2"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1667719141415' status='passed' stop='1667719141416'>
+                    <name>I see response code is successful </name>
+                    <title>I see response code is successful </title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1667719141419' status='passed' stop='1667719142165'>
+            <name>Verify a not found call</name>
+            <title>Verify a not found call</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1667719141421' status='passed' stop='1667719142164'>
+                    <name>I send get request "/api/users/266"</name>
+                    <title>I send get request "/api/users/266"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1667719142165' status='passed' stop='1667719142165'>
+                    <name>I see response code is client error </name>
+                    <title>I see response code is client error </title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1667719142167' status='passed' stop='1667719142584'>
+            <name>Verify getting a single user</name>
+            <title>Verify getting a single user</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1667719142169' status='passed' stop='1667719142584'>
+                    <name>I send get request "/api/users/2"</name>
+                    <title>I send get request "/api/users/2"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1667719142587' status='passed' stop='1667719142956'>
+            <name>Verify getting list of users</name>
+            <title>Verify getting list of users</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1667719142589' status='passed' stop='1667719142954'>
+                    <name>I send get request "/api/users?page=2"</name>
+                    <title>I send get request "/api/users?page=2"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

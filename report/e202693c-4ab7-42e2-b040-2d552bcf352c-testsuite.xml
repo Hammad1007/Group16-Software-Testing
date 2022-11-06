@@ -1,0 +1,56 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1667719142973' stop='1667719145980'>
+    <name>POST tests:</name>
+    <title>POST tests:</title>
+    <test-cases>
+        <test-case start='1667719142973' status='passed' stop='1667719143688'>
+            <name>Verify creating new user</name>
+            <title>Verify creating new user</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1667719142974' status='passed' stop='1667719143688'>
+                    <name>I: createNewUser </name>
+                    <title>I: createNewUser </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1667719142974' status='passed' stop='1667719143688'>
+                            <name>I send post request "/api/users", {"name":"Rene","job":"leader"}</name>
+                            <title>I send post request "/api/users", {"name":"Rene","job":"leader"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1667719143688' status='passed' stop='1667719143688'>
+                    <name>I see response code is successful </name>
+                    <title>I see response code is successful </title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1667719143691' status='passed' stop='1667719145974'>
+            <name>Verify uploading a file</name>
+            <title>Verify uploading a file</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1667719143697' status='passed' stop='1667719145972'>
+                    <name>I send post request "https://httpbin.org/post", [object FormData]</name>
+                    <title>I send post request "https://httpbin.org/post", [object FormData]</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1667719145973' status='passed' stop='1667719145974'>
+                    <name>I see response code is successful </name>
+                    <title>I see response code is successful </title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,41 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1667719139073' stop='1667719140944'>
+    <name>DELETE tests:</name>
+    <title>DELETE tests:</title>
+    <test-cases>
+        <test-case start='1667719139078' status='passed' stop='1667719140939'>
+            <name>Verify deleting a user</name>
+            <title>Verify deleting a user</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1667719139113' status='passed' stop='1667719140234'>
+                    <name>I: createNewUser </name>
+                    <title>I: createNewUser </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1667719139114' status='passed' stop='1667719140228'>
+                            <name>I send post request "/api/users", {"name":"Deion","job":"leader"}</name>
+                            <title>I send post request "/api/users", {"name":"Deion","job":"leader"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1667719140234' status='passed' stop='1667719140931'>
+                    <name>I send delete request "/api/users/462"</name>
+                    <title>I send delete request "/api/users/462"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1667719140931' status='passed' stop='1667719140934'>
+                    <name>I see response code is successful </name>
+                    <title>I see response code is successful </title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

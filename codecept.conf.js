@@ -4,7 +4,7 @@ exports.config = {
   output: './output',
   helpers: {
     REST: {
-      endpoint: 'http://localhost:3000/api'
+      endpoint: 'https://reqres.in'
     }
   },
   include: {
