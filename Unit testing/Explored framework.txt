@@ -1,0 +1,13 @@
+Base class for unit testing = ESTestCase
+It has many annotations in which the most important one is the LuceneTestCase class.
+This class also has many annotations. @Runwith annotation is most important.
+It's the runner for Junit (class which decides how the tests are run). It is an implementation
+for running randomized test cases with predictable and repeatable randomness.
+The test class is equipping us with a couple of methods that allows us to create random data. (random integer,
+random boolean, etc). 
+It helps us in testing too to get random data.
+When we run the tests, if a failure accurs, the framework provides us with a seed value which is mentioned
+in the test failure.
+ESTestCase has thread leak detection, log level vchanges, checks for excessive err/sysout writes,
+test method order is also randomized (no test will be dependent on any test before, all tests run independently),
+tests can run in parallel, hence, avoid paralyzation.  
