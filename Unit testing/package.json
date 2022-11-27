@@ -1,0 +1,34 @@
+{
+  "name": "cypress-cucumber",
+  "version": "1.0.0",
+  "description": "begin",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "cypress:runner": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber"
+  ],
+  "author": "Hammad1007",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.11.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^13.0.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "cucumber": "^6.0.7",
+    "esbuild": "^0.15.13",
+    "typescript": "^4.7.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hammad1007/Group16-Software-Testing"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}

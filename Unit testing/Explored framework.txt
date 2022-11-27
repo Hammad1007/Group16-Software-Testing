@@ -11,3 +11,7 @@ in the test failure.
 ESTestCase has thread leak detection, log level vchanges, checks for excessive err/sysout writes,
 test method order is also randomized (no test will be dependent on any test before, all tests run independently),
 tests can run in parallel, hence, avoid paralyzation.  
+
+
+ESSingleNodeTestCase is a derived class from ESTestCase which will help us in testing the framework by
+ourselves.
