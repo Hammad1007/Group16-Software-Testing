@@ -1,0 +1,11 @@
+SAST used in LINUX KERNEL.
+
+These tools are designed to analyze source code. The softwares mainly used are CheckPatch, Sparse, Smatch
+Sparse:  It’s a simple C parser that can view a program’s structure and create a symbol table showing exactly where every global symbol is defined.
+Smatch: It lets you see how values change across a sequence of code.  It also enables you to detect conditions that will always, or never, be true; null pointers;
+ and locks that end up in different states depending on the code path.
+
+ Others used are:
+ Klocwork, SonarCube, and CppCheck.
+
+
