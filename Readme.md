@@ -16,3 +16,15 @@
 **Performance Testing**
 1. See the configurations of softwares provided in the document.
 
+-----------
+
+##Meeting 2
+
+**Performance testing**
+Performance testing to be done on decided website using K6 configuration
+
+**Deliverable 4**
+1- select topic
+Topic selected "Chaos engineering"
+
+
