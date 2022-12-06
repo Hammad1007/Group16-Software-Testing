@@ -25,6 +25,17 @@ Some steps that are involved in Chaos Engineering are:
 4. Test in production environment
 5. Monitor and repeat
 
+Detail of STEPS:
+1- Define a steady state for the infrastructure that will be experimented on. This will include instrumenting components with application performance management (APM) tools like SignalFx, infrastructure monitoring tools like Prometheus and Grafana, and log consolidation and analysis tools like Splunk Enterprise.
+
+2- Now, cause actual real-world failures at a reasonable rate – look for single points of failure and performance bottlenecks. Going through previous incidents and looking for trends and types of incidents to cause is a solid place to start.
+
+3- Take random combinations of failures like servers offline, killing application instances or introducing failures and lag at the network layer. Maybe individually there won't be any effect but together they might cause unknown problems
+
+4- All activities should be performed in an experimental group, with a control group left as a comparison point.
+
+5- Compare your steady-state metrics to those you gather after injecting the disturbance into your system. If you find differences in the measurements, your chaos engineering experiment has succeeded.
+
 
 **References**
 1. https://orangematter.solarwinds.com/2022/08/18/what-is-chaos-engineering/#:~:text=Chaos%20engineering%20was%20pioneered%20at,server%20or%20data%20center%20failure.
